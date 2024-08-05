@@ -1,0 +1,19 @@
+{
+  "name": "ninja",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/cli": "^8.39.1",
+    "@wdio/local-runner": "^8.39.1",
+    "@wdio/mocha-framework": "^8.39.0",
+    "@wdio/spec-reporter": "^8.39.0",
+    "chromedriver": "^127.0.1",
+    "dotenv": "^16.4.5",
+    "supertest": "^7.0.0"
+  },
+  "scripts": {
+    "test": "wdio run wdio.conf.js",
+    "login": "wdio run wdio.conf.js --suite login",
+    "order": "wdio run wdio.conf.js --suite order",
+    "checkOrder": "wdio run wdio.conf.js --suite checkOrder"
+  }
+}
