@@ -29,8 +29,8 @@ https://staging.gotsurge.co
 Clone Repository
 
 ```sh
-$ git clone git@github.com:Tatauntoro/automation-web-wdio.git
-$ cd automation-web-wdio
+$ git clone git@github.com:Tatauntoro/web-automation.git
+$ cd web-automation
 ```
 
 Install dependencies:
