@@ -29,8 +29,8 @@ https://staging.gotsurge.co
 Clone Repository
 
 ```sh
-$ git clone git@github.com:Tatauntoro/web-automation.git
-$ cd web-automation
+$ git clone git@github.com:Tatauntoro/automation-web-wdio.git
+$ cd automation-web-wdio
 ```
 
 Install dependencies:
@@ -50,6 +50,7 @@ To run order creation, run:
 ```sh
 $ npm run order
 ```
+
 To run order monitoring, run:
 
 ```sh

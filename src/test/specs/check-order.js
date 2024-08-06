@@ -9,7 +9,7 @@ describe('Monitor Order', ()=>{
         LoginPage.open();
     });    
     
-    it.only('Validate Complete Order', async()=>{
+    it('Validate Complete Order', async()=>{
         await LoginPage.loginValid(data.credentials.validEmail, data.credentials.validPassword);
         await Action.expectToExist(await ActiveOrdersPage.tabPastOrders);
         await Action.clickOn(await ActiveOrdersPage.tabPastOrders);
