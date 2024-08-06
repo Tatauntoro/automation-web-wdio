@@ -1,16 +1,16 @@
-import Action from '../lib/action.js';
-import LoginPage from '../pages/login.page.js'
-import ActiveOrdersPage from '../pages/active-orders.page.js';
-import OrdersNewPage from '../pages/order-new.page.js';
-import data from '../support/data.js';
+import Action from "../lib/action.js";
+import LoginPage from "../pages/login.page.js";
+import ActiveOrdersPage from "../pages/active-orders.page.js";
+import OrdersNewPage from "../pages/order-new.page.js";
+import data from "../support/data.js";
 
-describe('Feature Login', () => {
+describe("Feature Login", () => {
 
   before(() => {
     LoginPage.open();
   });
-  
-  it('create order with marine service', async () => {
+
+  it("create order with marine service", async () => {
     await LoginPage.loginValid(data.credentials.validEmail, data.credentials.validPassword);
     if (await Action.expectToExist(await ActiveOrdersPage.buttonFillFormWhenEmptyOrders)) {
       await Action.clickOn(await ActiveOrdersPage.buttonFillFormWhenEmptyOrders);

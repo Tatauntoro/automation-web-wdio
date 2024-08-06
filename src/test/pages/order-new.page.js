@@ -1,6 +1,6 @@
-import { $ } from '@wdio/globals'
-import Action from '../lib/action.js';
-import data from '../support/data.js';
+import { $ } from "@wdio/globals";
+import Action from "../lib/action.js";
+import data from "../support/data.js";
 
 class OrdersNewPage {
 
@@ -67,7 +67,6 @@ class OrdersNewPage {
   get buttonSubmit () { return $("//button[@class='sc-gEkIjz ieSkpO' and contains(text(),'Confirm')]"); }
   get buttonOk () { return $("//button[@class='sc-gEkIjz ieSkpO' and contains(text(),'OK')]"); }
 
-
   async selectService() {
     await Action.clickOn(await this.linkEnterManually);
     await Action.setValue(await this.inputVesselName, data.order.vesselName);
@@ -82,7 +81,7 @@ class OrdersNewPage {
     await Action.chooseDate(await this.selectDate[1]);
     await Action.clickOn(await this.selectTime[1]);
   };
-  
+
   async collectFrom() {
     await Action.scrollAndClickOn(await this.buttonLandCollect[0]);
     //popup collect from for location

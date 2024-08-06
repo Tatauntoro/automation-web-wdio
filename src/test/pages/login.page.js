@@ -1,7 +1,7 @@
-import { $ } from '@wdio/globals'
-import Page from './page.js';
-import Action from '../lib/action.js';
-import ActiveOrdersPage from './active-orders.page.js';
+import { $ } from "@wdio/globals";
+import Page from "./page.js";
+import Action from "../lib/action.js";
+import ActiveOrdersPage from "./active-orders.page.js";
 
 class LoginPage extends Page {
 
@@ -12,7 +12,7 @@ class LoginPage extends Page {
   get buttonLogin () { return $("//button[contains(text(),'Log in')]"); }
 
   open () {
-    return super.open('/login');
+    return super.open("/login");
   }
 
   async loginValid (email, password) {

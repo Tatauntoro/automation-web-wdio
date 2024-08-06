@@ -1,4 +1,4 @@
-import { $ } from '@wdio/globals'
+import { $ } from "@wdio/globals";
 
 class ActiveOrdersPage {
 
@@ -11,7 +11,7 @@ class ActiveOrdersPage {
   get buttonFillFormWhenActiveOrders () { return $("//button[@class='sc-gEkIjz bveEui sc-NsUQg htEhUB']"); }
 
   get titleOrders () { return $$("//h4[@class='sc-kFWlue katDmN']"); }
-  
+
   //status
   get broadcastingStatus () { return $$("//div[@class='sc-fIGJwM fMzYow']"); }
   get completeStatus () { return $$("//div[@class='sc-fIGJwM eaGLsN']");}
