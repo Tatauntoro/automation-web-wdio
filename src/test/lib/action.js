@@ -75,6 +75,10 @@ class Action {
     await date.waitForClickable();
     await date.click();
   };
+
+  async scrollPage(){
+    await browser.scroll(1, 500)
+  };
 };
 
 export default new Action();
