@@ -10,7 +10,7 @@ class OrdersNewPage {
 
   //section mother vessel
   get inputSearchVesselName () { return $("//input[@name='to_contact_vessel_name']"); }
-  get linkEnterManually () { return $("//div[contains(text(),'Enter manually')]"); }
+  get linkEnterManually () { return $("//div[@class=\"sc-gDszPb brwowz\"]"); }
   get textImoNumber () { return $("//div[@class='sc-kZkypy eGcrlf']"); }
   get selectDate () { return $$("//input[@class='sc-iEXKAA frTsup']"); }
   get selectTime () { return $$("//li[@class='react-datepicker__time-list-item ']"); }
