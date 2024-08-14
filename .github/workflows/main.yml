@@ -11,6 +11,7 @@ on:
           - login
           - order
           - checkOrder
+          - headed
 
 jobs:
   build:
