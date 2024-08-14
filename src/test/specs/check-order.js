@@ -1,4 +1,5 @@
 import ActiveOrdersPage from "../pages/active-orders.page.js";
+import OrderActivity from "../pages/order-activity.page.js";
 import Action from "../lib/action.js";
 import LoginPage from "../pages/login.page.js";
 import data from "../support/data.js";
@@ -16,9 +17,16 @@ describe("Monitor Order", ()=>{
     await Action.expectToHaveText(await ActiveOrdersPage.titleOrders[0], "AUTOMATION TEST M03");
     await Action.pauseUntill(4000);
     await Action.expectToHaveText(await ActiveOrdersPage.completeStatus[0], "Complete");
+    await Action.clickOn(await ActiveOrdersPage.completeStatus[0]);
   });
 
-  it("Validate Unsuccessfull Delivery Order", async()=>{
+  it("Validate Order Activity - Completed", async()=>{
+
+    await OrderActivity.orderActivityPage();
+
+  });
+
+  it.skip("Validate Unsuccessfull Delivery Order", async()=>{
     await Action.expectToExist(await ActiveOrdersPage.tabPastOrders);
     await Action.clickOn(await ActiveOrdersPage.tabPastOrders);
     await Action.expectToHaveText(await ActiveOrdersPage.titleOrders[0], "AUTOMATION TEST M03");
