@@ -18,7 +18,7 @@ export const config = {
       browserName: "chrome",
       "goog:chromeOptions": {
         args: [
-          "headless",
+          //"headless",
           "no-sandbox",
           "start-maximized",
         ],
