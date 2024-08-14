@@ -34,6 +34,6 @@ describe("Feature Login", () => {
     await Action.pauseUntill(1000);
     await Action.expectToHaveText(await ActiveOrdersPage.titleOrders[0], "AUTOMATION TEST M03");
     await Action.pauseUntill(4000);
-    await Action.expectToHaveText(await ActiveOrdersPage.broadcastingStatus[0], "Broadcasting");
+    await Action.expectToHaveText(await ActiveOrdersPage.broadcastingStatus[0], "Pending Broadcast");
   });
 });
