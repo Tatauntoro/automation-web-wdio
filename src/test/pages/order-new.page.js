@@ -68,6 +68,7 @@ class OrdersNewPage {
   get buttonOk () { return $("//button[@class='sc-gEkIjz ieSkpO' and contains(text(),'OK')]"); }
 
   async selectService() {
+    await Action.pauseUntill(1000);
     await Action.clickOn(await this.linkEnterManually);
     await Action.setValue(await this.inputVesselName, data.order.vesselName);
     await Action.setValue(await this.inputImoNumber, data.order.imoNumber);
