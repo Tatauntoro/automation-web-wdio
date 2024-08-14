@@ -35,4 +35,11 @@ jobs:
       run: npm install
 
     - name: Run tests
-      run: npm run ${{ inputs.profile }}
+      run: |
+        if [ "${{ inputs.profile }}" == "headed" ]; then
+          npx wdio run wdio.conf.js --headless false;
+        else
+          npm run ${{ inputs.profile }};
+        fi
+      env:
+        CI: true
