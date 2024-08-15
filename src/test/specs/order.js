@@ -31,9 +31,9 @@ describe("Feature Login", () => {
     await Action.clickOn(await OrdersNewPage.buttonSubmit);
     await Action.pauseUntill(1000);
     await Action.clickOn(await OrdersNewPage.buttonOk);
-    await Action.pauseUntill(1000);
-    await Action.expectToHaveText(await ActiveOrdersPage.titleOrders[0], "AUTOMATION TEST M03");
     await Action.pauseUntill(4000);
+    await Action.expectToHaveText(await ActiveOrdersPage.titleOrders[0], "AUTOMATION TEST M03");
+    await Action.pauseUntill(6000);
     await Action.expectToHaveText(await ActiveOrdersPage.broadcastingStatus[0], "Broadcasting");
   });
 });
